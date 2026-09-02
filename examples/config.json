@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "revision": 0,
+  "mqtt": {
+    "url": "mqtt://wb.local:1883"
+  },
+  "bridge": {
+    "name": "Wiren Board Matter Bridge",
+    "vendorName": "Wiren Board",
+    "productName": "WB Matter Bridge",
+    "port": 5540,
+    "uiPort": 8787,
+    "listenAddress": "0.0.0.0"
+  },
+  "devices": []
+}

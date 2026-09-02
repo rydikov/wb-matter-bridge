@@ -1,0 +1,21 @@
+services:
+  wb-matter-bridge:
+    build:
+      context: .
+      platforms:
+        - linux/arm64
+    image: wb-matter-bridge:local
+    container_name: wb-matter-bridge
+    restart: unless-stopped
+    network_mode: host
+    environment:
+      TZ: Europe/Moscow
+      LOG_LEVEL: info
+      WB_MATTER_DATA: /data
+      WB_MATTER_STORAGE_PATH: /data/runtime/matter
+    volumes:
+      - ./data:/data
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
